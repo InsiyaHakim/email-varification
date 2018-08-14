@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styling/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        {% if user_record %}
+            {% for users in user_record %}
+                {{ users['emails'] }}
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div id='message'>
+        {{ message }}
+    </div><br><br>
+    <div>
+        <form action="/index" method='POST'>
+            Email Address <input type="email" name='email' size=80px>
+            <input type="submit" value='submit'>
+        </form>
+    </div>
+    
+</body>
+</html>

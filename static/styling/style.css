@@ -1,0 +1,20 @@
+#para{
+    display: inline-block;
+    background-color: green;
+    width: 306px;
+    padding: 0px 61px;
+    margin-left: 37px;
+}
+#para p{
+    font-size: 20px;
+}
+h3{
+    text-decoration: underline;
+    margin-left: 10px;
+}
+a{
+    color: white;
+    padding: 6px;
+    background-color: red;
+    text-decoration: none;
+}

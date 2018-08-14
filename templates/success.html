@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styling/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div id ='para'>
+        <p>The email address you entered (___) is a VALID email address! Thankyou!</p>
+    </div>
+    <div>
+        <h3>Email Addresses Entered</h3>
+        <table cellspacing=15px>
+            <tbody>
+                {% for users in users_record %}
+                    <tr><td>{{ users['emails'] }}</td><td>{{ users['created_at'] }}</td><td><a href="/{{ users['id'] }}/delete">Delete</a></td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
